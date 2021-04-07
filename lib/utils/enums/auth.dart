@@ -1,0 +1,1 @@
+enum AuthenticationScreenToDisplay {Login, Registration}
