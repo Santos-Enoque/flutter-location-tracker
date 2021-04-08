@@ -66,7 +66,7 @@ class SingleDeviceDraggable extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              DeviceActionButton(image: playIcon, text: "Play Sound", onTap: (){}),
+              DeviceActionButton(image: playIcon, text: "Locations", onTap: (){}),
               DeviceActionButton(image: routeIcon, text: "Directions", onTap: (){}),
                 Container(
                     margin: EdgeInsets.all(8),
