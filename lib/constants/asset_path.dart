@@ -7,6 +7,7 @@ final String iphone = _getImagePath("iphone.png");
 final String apple = _getImagePath("apple.png");
 final String playIcon = _getImagePath("play.png");
 final String routeIcon = _getImagePath("route.png");
+final String locationIcon = _getImagePath("location.png");
 
 String _getImagePath(String fileName){
   return imageAssetsRoot + fileName;
