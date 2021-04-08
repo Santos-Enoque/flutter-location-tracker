@@ -30,6 +30,7 @@ dependencies:
   firebase_messaging: ^9.1.1
   nb_utils: ^4.0.9
   provider: ^5.0.0
+  google_maps_flutter: ^2.0.3
 
 dev_dependencies:
   flutter_test:

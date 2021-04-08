@@ -1,5 +1,6 @@
 import 'package:cadevo/providers/app.dart';
 import 'package:cadevo/screens/authentication/auth.dart';
+import 'package:cadevo/screens/home/widgets/maps.dart';
 import 'package:cadevo/utils/helpers/screen_navigation.dart';
 import 'package:cadevo/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,23 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.grey.shade300,
       body: Stack(
         children: [
-          appProvider.activeDraggableWidget
+          MapWidget(),
+          appProvider.activeDraggableWidget,
+          Positioned(
+              top: 10,
+              right: 15,
+              child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(.5),
+                          blurRadius: 3,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: IconButton(icon: Icon(Icons.map), onPressed: (){})))
         ],
       ),
     );
