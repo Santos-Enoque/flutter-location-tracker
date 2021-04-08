@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cadevo">
+    package="com.santosenoque.cadevo">
    <application
         android:label="cadevo"
         android:icon="@mipmap/ic_launcher">

@@ -28,7 +28,7 @@ class AuthenticationScreen extends StatelessWidget {
                 SizedBox(height: MediaQuery.of(context).size.width / 1.3),
 
                 SizedBox(
-                  height: 20,
+                  height: MediaQuery.of(context).size.width / 70,
                 ),
 
                 Visibility(
@@ -71,7 +71,7 @@ class AuthenticationScreen extends StatelessWidget {
               ],
             ),
             Positioned(
-              top: 150,
+              top: MediaQuery.of(context).size.height /6,
               left: 20,
               child: Image.asset(
                 logo2,

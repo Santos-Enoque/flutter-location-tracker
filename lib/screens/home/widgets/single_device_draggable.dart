@@ -61,25 +61,28 @@ class SingleDeviceDraggable extends StatelessWidget {
             ),
           SizedBox(height: 10,),
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-            DeviceActionButton(image: playIcon, text: "Play Sound", onTap: (){}),
-            DeviceActionButton(image: routeIcon, text: "Directions", onTap: (){}),
-              Container(
-                  margin: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(.5),
-                          blurRadius: 3,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(20)
-                  ),
-                  child: IconButton(icon: Icon(Icons.delete, color: Colors.red,), onPressed: (){}))
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              DeviceActionButton(image: playIcon, text: "Play Sound", onTap: (){}),
+              DeviceActionButton(image: routeIcon, text: "Directions", onTap: (){}),
+                Container(
+                    margin: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(.5),
+                            blurRadius: 3,
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: IconButton(icon: Icon(Icons.delete, color: Colors.red,), onPressed: (){}))
+              ],
+            ),
           ),
 
 

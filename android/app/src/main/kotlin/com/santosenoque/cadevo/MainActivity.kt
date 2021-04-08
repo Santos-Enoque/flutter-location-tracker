@@ -1,4 +1,4 @@
-package com.example.cadevo
+package com.santosenoque.cadevo
 
 import io.flutter.embedding.android.FlutterActivity
 
