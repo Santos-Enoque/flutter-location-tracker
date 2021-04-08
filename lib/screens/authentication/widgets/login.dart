@@ -2,7 +2,6 @@ import 'package:cadevo/screens/home/home.dart';
 import 'package:cadevo/utils/helpers/screen_navigation.dart';
 import 'package:cadevo/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-import 'package:nb_utils/nb_utils.dart';
 
 class LoginWidget extends StatelessWidget {
   @override

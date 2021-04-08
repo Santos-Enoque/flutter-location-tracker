@@ -1,4 +1,3 @@
-import 'package:cadevo/constants/asset_path.dart';
 import 'package:cadevo/providers/app.dart';
 import 'package:cadevo/screens/authentication/auth.dart';
 import 'package:cadevo/utils/helpers/screen_navigation.dart';

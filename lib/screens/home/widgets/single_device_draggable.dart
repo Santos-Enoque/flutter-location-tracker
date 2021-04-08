@@ -1,5 +1,4 @@
 import 'package:cadevo/constants/asset_path.dart';
-import 'package:cadevo/models/device.dart';
 import 'package:cadevo/providers/app.dart';
 import 'package:cadevo/screens/home/widgets/device_action_button.dart';
 import 'package:cadevo/screens/home/widgets/devices_draggable.dart';
