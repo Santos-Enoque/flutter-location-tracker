@@ -4,8 +4,6 @@ import 'package:cadevo/screens/authentication/widgets/bottom_text.dart';
 import 'package:cadevo/screens/authentication/widgets/login.dart';
 import 'package:cadevo/screens/authentication/widgets/registration.dart';
 import 'package:cadevo/utils/enums/auth.dart';
-import 'package:cadevo/widgets/custom_button.dart';
-import 'package:cadevo/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
