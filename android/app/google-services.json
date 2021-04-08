@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "141625150617",
+    "project_id": "cadevo-59ab7",
+    "storage_bucket": "cadevo-59ab7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141625150617:android:0232d3b56535a70d0b3c08",
+        "android_client_info": {
+          "package_name": "com.santosenoque.cadevo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141625150617-lnm8m3ag9g7045timv23ssmqm1v03kp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCePDl6DEDmQVU3swhQSmDZvEaqQwDSf6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141625150617-lnm8m3ag9g7045timv23ssmqm1v03kp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
