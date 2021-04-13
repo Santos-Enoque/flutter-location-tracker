@@ -1,1 +1,0 @@
-enum AuthWidget {Login, Registration}

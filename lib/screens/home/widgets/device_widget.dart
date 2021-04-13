@@ -1,5 +1,7 @@
 import 'package:cadevo/constants/asset_path.dart';
+import 'package:cadevo/constants/controllers.dart';
 import 'package:cadevo/models/device.dart';
+import 'package:cadevo/screens/home/widgets/single_device_draggable.dart';
 import 'package:cadevo/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,8 @@ class DeviceWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
+        appController.changeActiveDeviceTo(device);
+        appController.changeActiveDraggableWidgetTo(SingleDeviceDraggable());
       },
       leading: Image.asset(
         _returnImage(),

@@ -1,7 +1,10 @@
 import 'package:cadevo/constants/asset_path.dart';
+import 'package:cadevo/constants/controllers.dart';
 import 'package:cadevo/screens/home/widgets/device_action_button.dart';
 import 'package:cadevo/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
+
+import 'devices_draggable.dart';
 
 
 class SingleDeviceDraggable extends StatelessWidget {
@@ -37,7 +40,7 @@ class SingleDeviceDraggable extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 15),
                 child: CustomText(
-                  text: "Samsung",
+                  text: appController.activeDevie.value.name,
                   size: 22,
                   weight: FontWeight.bold,
                 ),
@@ -45,6 +48,7 @@ class SingleDeviceDraggable extends StatelessWidget {
               IconButton(
                   icon: Icon(Icons.close),
                   onPressed: () {
+                    appController.changeActiveDraggableWidgetTo(DevicesDraggable());
                   })
             ]),
             Padding(

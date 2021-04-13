@@ -1,9 +1,9 @@
-import 'package:cadevo/controllers/authController.dart';
+import 'package:cadevo/screens/home/home.dart';
 import 'package:cadevo/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class RegistrationWidget extends StatelessWidget {
-  final AuthController _authController = AuthController.instance;
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -34,7 +34,7 @@ class RegistrationWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: _authController.name,
+                    controller: null,
                     decoration: InputDecoration(
                         icon: Icon(Icons.person),
                         fillColor: Colors.white,
@@ -58,7 +58,7 @@ class RegistrationWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: _authController.email,
+                    controller: null,
                     decoration: InputDecoration(
                         icon: Icon(Icons.email_outlined),
                         fillColor: Colors.white,
@@ -83,7 +83,7 @@ class RegistrationWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: _authController.password,
+                    controller: null,
                     decoration: InputDecoration(
                         icon: Icon(Icons.lock),
                         fillColor: Colors.white,
@@ -99,7 +99,8 @@ class RegistrationWidget extends StatelessWidget {
             child: CustomButton(
                 bgColor: Colors.blue.shade700,
                 text: "Register", onTap: (){
-                  _authController.signUp();
+                                    Get.to(HomeScreen());
+
                 }),
           )
         ],
