@@ -1,15 +1,11 @@
-import 'package:cadevo/providers/app.dart';
-import 'package:cadevo/screens/authentication/auth.dart';
-import 'package:cadevo/screens/home/widgets/maps.dart';
-import 'package:cadevo/utils/helpers/screen_navigation.dart';
+import 'package:cadevo/constants/controllers.dart';
 import 'package:cadevo/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AppProvider appProvider = Provider.of(context);
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -29,7 +25,7 @@ class HomeScreen extends StatelessWidget {
             UserAccountsDrawerHeader(accountName: Text("Santos"), accountEmail: Text("asb@asn.com")),
             ListTile(
               onTap: (){
-                changeScreenReplacement(context, AuthenticationScreen());
+                authController.signOut();
               },
               leading: Icon(Icons.exit_to_app),
               title: Text("Log out"),
@@ -38,10 +34,9 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       backgroundColor: Colors.grey.shade300,
-      body: Stack(
+      body: Obx(()=>Stack(
         children: [
-          MapWidget(),
-          appProvider.activeDraggableWidget,
+          appController.activeDraggableWidget.value,
           Positioned(
               top: 10,
               right: 15,
@@ -58,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   child: IconButton(icon: Icon(Icons.map), onPressed: (){})))
         ],
-      ),
+      )),
     );
   }
 }

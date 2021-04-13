@@ -1,9 +1,9 @@
-import 'package:cadevo/screens/home/home.dart';
-import 'package:cadevo/utils/helpers/screen_navigation.dart';
+import 'package:cadevo/controllers/authController.dart';
 import 'package:cadevo/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class LoginWidget extends StatelessWidget {
+  final AuthController _authController = AuthController.instance;
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -34,7 +34,7 @@ borderRadius: BorderRadius.circular(20)
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: null,
+                    controller: _authController.email,
                     decoration: InputDecoration(
                         icon: Icon(Icons.email_outlined),
                         fillColor: Colors.white,
@@ -58,7 +58,7 @@ borderRadius: BorderRadius.circular(20)
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: null,
+                    controller: _authController.password,
                     decoration: InputDecoration(
                         icon: Icon(Icons.lock),
                         fillColor: Colors.white,
@@ -74,7 +74,7 @@ borderRadius: BorderRadius.circular(20)
             child: CustomButton(
                 bgColor: Colors.blue.shade700,
                 text: "Login", onTap: (){
-                  changeScreenReplacement(context, HomeScreen());
+                  _authController.singIn();
             }),
           )
         ],

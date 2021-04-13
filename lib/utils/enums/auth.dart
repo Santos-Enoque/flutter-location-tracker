@@ -1,1 +1,1 @@
-enum AuthenticationScreenToDisplay {Login, Registration}
+enum AuthWidget {Login, Registration}

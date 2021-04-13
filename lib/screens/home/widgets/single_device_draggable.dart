@@ -1,16 +1,12 @@
 import 'package:cadevo/constants/asset_path.dart';
-import 'package:cadevo/providers/app.dart';
 import 'package:cadevo/screens/home/widgets/device_action_button.dart';
-import 'package:cadevo/screens/home/widgets/devices_draggable.dart';
 import 'package:cadevo/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 
 class SingleDeviceDraggable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AppProvider appProvider = Provider.of(context);
     return DraggableScrollableSheet(
         initialChildSize: .3,
         builder: (context, scrollable) {
@@ -41,7 +37,7 @@ class SingleDeviceDraggable extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 15),
                 child: CustomText(
-                  text: appProvider.activeDevie.name,
+                  text: "Samsung",
                   size: 22,
                   weight: FontWeight.bold,
                 ),
@@ -49,7 +45,6 @@ class SingleDeviceDraggable extends StatelessWidget {
               IconButton(
                   icon: Icon(Icons.close),
                   onPressed: () {
-                    appProvider.changeActiveDraggableWidget(DevicesDraggable());
                   })
             ]),
             Padding(
