@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget {
             UserAccountsDrawerHeader(accountName: Text("Santos"), accountEmail: Text("asb@asn.com")),
             ListTile(
               onTap: (){
+                authController.signOut();
               },
               leading: Icon(Icons.exit_to_app),
               title: Text("Log out"),

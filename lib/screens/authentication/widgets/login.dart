@@ -1,3 +1,5 @@
+import 'package:cadevo/constants/controllers.dart';
+import 'package:cadevo/constants/firebase.dart';
 import 'package:cadevo/screens/home/home.dart';
 import 'package:cadevo/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +36,7 @@ borderRadius: BorderRadius.circular(20)
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: null,
+                    controller: authController.email,
                     decoration: InputDecoration(
                         icon: Icon(Icons.email_outlined),
                         fillColor: Colors.white,
@@ -58,7 +60,7 @@ borderRadius: BorderRadius.circular(20)
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: null,
+                    controller: authController.password,
                     decoration: InputDecoration(
                         icon: Icon(Icons.lock),
                         fillColor: Colors.white,
@@ -74,7 +76,7 @@ borderRadius: BorderRadius.circular(20)
             child: CustomButton(
                 bgColor: Colors.blue.shade700,
                 text: "Login", onTap: (){
-                  Get.to(HomeScreen());
+                  authController.signIn();
             }),
           )
         ],

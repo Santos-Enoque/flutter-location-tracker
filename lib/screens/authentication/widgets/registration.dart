@@ -1,3 +1,4 @@
+import 'package:cadevo/constants/controllers.dart';
 import 'package:cadevo/screens/home/home.dart';
 import 'package:cadevo/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,7 @@ class RegistrationWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: null,
+                    controller: authController.name,
                     decoration: InputDecoration(
                         icon: Icon(Icons.person),
                         fillColor: Colors.white,
@@ -58,7 +59,7 @@ class RegistrationWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: null,
+                    controller: authController.email,
                     decoration: InputDecoration(
                         icon: Icon(Icons.email_outlined),
                         fillColor: Colors.white,
@@ -83,7 +84,7 @@ class RegistrationWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                   child: TextField(
-                    controller: null,
+                    controller: authController.password,
                     decoration: InputDecoration(
                         icon: Icon(Icons.lock),
                         fillColor: Colors.white,
@@ -99,8 +100,7 @@ class RegistrationWidget extends StatelessWidget {
             child: CustomButton(
                 bgColor: Colors.blue.shade700,
                 text: "Register", onTap: (){
-                                    Get.to(HomeScreen());
-
+                    authController.signUp();
                 }),
           )
         ],
